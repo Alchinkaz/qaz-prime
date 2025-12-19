@@ -8,13 +8,13 @@ export const Hero: React.FC = () => {
   };
 
   return (
-    <div className="relative bg-slate-950 overflow-hidden h-screen flex flex-col">
+    <div className="relative bg-slate-950 md:overflow-hidden min-h-screen md:h-screen flex flex-col">
       {/* Background Gradients */}
       <div className="absolute top-0 left-1/4 w-96 h-96 bg-red-600/20 rounded-full blur-[128px] -z-10"></div>
       <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-blue-600/10 rounded-full blur-[128px] -z-10"></div>
 
       {/* Main Content Area */}
-      <div className="flex-1 flex items-center pt-24 md:pt-32 pb-0 overflow-hidden">
+      <div className="flex-1 flex items-center pt-32 md:pt-32 pb-0 md:overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full h-full flex flex-col">
           <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center h-full">
 
@@ -47,13 +47,13 @@ export const Hero: React.FC = () => {
               </div>
             </div>
 
-            {/* Image Content - Constrained to available height */}
-            <div className="relative flex-1 h-full min-h-0 flex items-end justify-center md:justify-end">
-              <div className="absolute inset-0 bg-gradient-to-tr from-red-600/20 to-blue-600/20 rounded-t-3xl blur-2xl opacity-50"></div>
+            {/* Image Content - Large on mobile, constrained on desktop */}
+            <div className="relative flex-1 w-full h-[450px] md:h-full min-h-0 flex items-end justify-center md:justify-end mt-4 md:mt-0">
+              <div className="absolute inset-x-0 bottom-0 h-2/3 bg-gradient-to-t from-red-600/20 to-transparent rounded-t-3xl blur-2xl opacity-50"></div>
               <img
                 src="/hero.png"
                 alt="Юридическая защита"
-                className="relative z-10 max-w-full max-h-full object-contain object-bottom drop-shadow-2xl"
+                className="relative z-10 w-full md:w-auto max-w-full h-full md:max-h-full object-contain object-bottom drop-shadow-2xl"
               />
             </div>
 
@@ -61,8 +61,8 @@ export const Hero: React.FC = () => {
         </div>
       </div>
 
-      {/* Marquee - Now naturally sits at the bottom of the screen */}
-      <div className="relative z-20 shrink-0">
+      {/* Marquee - Naturally follows the content on mobile, sits at bottom on desktop */}
+      <div className="relative z-20 shrink-0 md:absolute md:bottom-0 md:left-0 md:right-0">
         <RunningLine />
       </div>
     </div>
