@@ -5,10 +5,9 @@ export const Founder: React.FC = () => {
   return (
     <div className="bg-slate-950 py-24 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col-reverse gap-12 lg:grid lg:grid-cols-2 lg:gap-20 items-start">
-
-          {/* Left Column: Content (Visually bottom on mobile, left on desktop) */}
-          <div>
+        <div className="grid md:grid-cols-2 gap-12 lg:gap-20 items-center">
+          {/* Content Column */}
+          <div className="order-2 md:order-1">
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-2 leading-tight">
               Жексембеков Биржан Тайырович
             </h2>
@@ -38,7 +37,7 @@ export const Founder: React.FC = () => {
             </div>
           </div>
 
-          <div className="w-full h-[400px] lg:h-auto lg:min-h-[500px] relative">
+          <div className="w-full h-[400px] md:h-auto md:min-h-[500px] relative order-1 md:order-2">
             <div className="absolute inset-0 bg-red-600/10 rounded-2xl blur-3xl -z-10"></div>
             <img
               src="/founder.JPG"
