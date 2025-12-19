@@ -7,6 +7,31 @@ export const Hero: React.FC = () => {
     document.getElementById('contact-form')?.scrollIntoView({ behavior: 'smooth' });
   };
 
+  const [isBadgeVisible, setIsBadgeVisible] = React.useState(false);
+  const badgeRef = React.useRef<HTMLDivElement>(null);
+
+  React.useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsBadgeVisible(true);
+          observer.unobserve(entry.target);
+        }
+      },
+      { threshold: 0.2 }
+    );
+
+    if (badgeRef.current) {
+      observer.observe(badgeRef.current);
+    }
+
+    return () => {
+      if (badgeRef.current) {
+        observer.unobserve(badgeRef.current);
+      }
+    };
+  }, []);
+
   return (
     <div className="relative bg-slate-950 flex flex-col overflow-hidden">
       {/* Background Gradients (Fixed/Absolute) */}
@@ -81,7 +106,10 @@ export const Hero: React.FC = () => {
       {/* Mobile-Only Section: Large Image and Marquee (Appears after h-screen) */}
       <div className="md:hidden flex flex-col bg-slate-950 pt-12">
         {/* Founder Badge - Mobile */}
-        <div className="px-6 mb-6 animate-fade-in-up">
+        <div
+          ref={badgeRef}
+          className={`px-6 mb-6 transition-all duration-1000 ${isBadgeVisible ? 'animate-fade-in-up opacity-100' : 'opacity-0'}`}
+        >
           <div className="flex flex-col gap-1 bg-slate-900/50 backdrop-blur-md border border-slate-800 p-4 rounded-xl w-full max-w-sm mx-auto text-center items-center">
             <div className="text-white font-bold text-base leading-tight">Биржан Жексембеков</div>
             <div className="text-slate-400 text-[11px] leading-tight font-medium uppercase tracking-tight">Основатель и руководитель QazPrime</div>
