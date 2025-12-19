@@ -1,6 +1,7 @@
 import React from 'react';
 import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
+import { RunningLine } from './components/RunningLine';
 import { Stats } from './components/Stats';
 import { Steps } from './components/Steps';
 import { Services } from './components/Services';
@@ -16,6 +17,7 @@ function App() {
     <div className="min-h-screen bg-slate-950 font-sans text-slate-100 selection:bg-red-600 selection:text-white">
       <Navbar />
       <Hero />
+      <RunningLine />
       <Stats />
       <Services />
       <Steps />
