@@ -7,7 +7,7 @@ export const Hero: React.FC = () => {
   };
 
   return (
-    <div className="relative bg-slate-950 overflow-hidden min-h-screen flex items-center pt-48 pb-12">
+    <div className="relative bg-slate-950 overflow-hidden min-h-screen flex items-center pt-48 pb-0">
       {/* Background Gradients */}
       <div className="absolute top-0 left-1/4 w-96 h-96 bg-red-600/20 rounded-full blur-[128px] -z-10"></div>
       <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-blue-600/10 rounded-full blur-[128px] -z-10"></div>
@@ -56,12 +56,12 @@ export const Hero: React.FC = () => {
           </div>
 
           {/* Image Content Placeholder - Visible on all screens, below text on mobile */}
-          <div className="relative h-[400px] md:h-[600px] w-full mt-8 md:mt-0 flex items-center justify-center">
-            <div className="absolute inset-0 bg-gradient-to-tr from-red-600/20 to-blue-600/20 rounded-3xl blur-2xl"></div>
+          <div className="relative h-[400px] md:h-[600px] w-full mt-8 md:mt-0 flex items-end justify-center">
+            <div className="absolute inset-0 bg-gradient-to-tr from-red-600/20 to-blue-600/20 rounded-t-3xl blur-2xl"></div>
             <img
               src="/hero.png"
               alt="Юридическая защита"
-              className="relative z-10 w-full h-full object-contain drop-shadow-2xl"
+              className="relative z-10 w-full h-full object-contain object-bottom drop-shadow-2xl"
             />
           </div>
 
