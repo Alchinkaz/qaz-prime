@@ -50,8 +50,21 @@ export const Hero: React.FC = () => {
               </div>
 
               {/* Desktop Image Container */}
-              <div className="hidden md:flex relative flex-1 h-full min-h-0 items-end justify-center md:justify-end overflow-hidden">
+              <div className="hidden md:flex relative flex-1 h-full min-h-0 items-end justify-center md:justify-end">
                 <div className="absolute inset-x-0 bottom-0 h-2/3 bg-gradient-to-t from-red-600/20 to-transparent rounded-t-3xl blur-2xl opacity-50"></div>
+
+                {/* Founder Badge - Desktop/Tablet */}
+                <div className="absolute top-12 left-0 lg:-left-2 z-20 animate-fade-in-up">
+                  <div className="bg-slate-900/80 backdrop-blur-md border border-slate-700/50 p-4 rounded-2xl shadow-2xl flex flex-col gap-1 max-w-[200px]">
+                    <div className="flex items-center gap-2">
+                      <div className="w-1.5 h-1.5 rounded-full bg-red-600 animate-pulse"></div>
+                      <span className="text-[10px] text-red-500 uppercase font-bold tracking-widest">Эксперт</span>
+                    </div>
+                    <div className="text-white font-bold text-sm leading-tight">Биржан Жексембеков</div>
+                    <div className="text-slate-400 text-[10px] leading-tight font-medium uppercase tracking-tight">Основатель и руководитель QazPrime</div>
+                  </div>
+                </div>
+
                 <img
                   src="/hero.png"
                   alt="Юридическая защита"
@@ -70,7 +83,19 @@ export const Hero: React.FC = () => {
       </div>
 
       {/* Mobile-Only Section: Large Image and Marquee (Appears after h-screen) */}
-      <div className="md:hidden flex flex-col bg-slate-950">
+      <div className="md:hidden flex flex-col bg-slate-950 pt-12">
+        {/* Founder Badge - Mobile */}
+        <div className="px-6 mb-6">
+          <div className="inline-flex flex-col gap-1 bg-slate-900/50 backdrop-blur-md border border-slate-800 p-4 rounded-xl w-full max-w-sm mx-auto">
+            <div className="flex items-center gap-2">
+              <div className="w-1.5 h-1.5 rounded-full bg-red-600"></div>
+              <span className="text-[10px] text-red-500 uppercase font-bold tracking-widest">Эксперт проекта</span>
+            </div>
+            <div className="text-white font-bold text-base leading-tight">Биржан Жексембеков</div>
+            <div className="text-slate-400 text-[11px] leading-tight font-medium uppercase tracking-tight">Основатель и руководитель QazPrime</div>
+          </div>
+        </div>
+
         <div className="relative w-full h-[500px] flex items-end justify-center overflow-hidden">
           <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-red-600/20 to-transparent blur-3xl opacity-60"></div>
           <img
@@ -83,6 +108,16 @@ export const Hero: React.FC = () => {
           <RunningLine />
         </div>
       </div>
+
+      <style>{`
+        @keyframes fade-in-up {
+          from { opacity: 0; transform: translateY(20px); }
+          to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-fade-in-up {
+          animation: fade-in-up 1s ease-out forwards;
+        }
+      `}</style>
     </div>
   );
 };
