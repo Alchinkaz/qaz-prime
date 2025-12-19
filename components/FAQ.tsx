@@ -11,6 +11,21 @@ export const FAQ: React.FC = () => {
 
   return (
     <div id="faq" className="bg-slate-950 py-24">
+      {/* FAQ Structured Data for SEO */}
+      <script type="application/ld+json">
+        {JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          "mainEntity": FAQS.map(faq => ({
+            "@type": "Question",
+            "name": faq.question,
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": faq.answer
+            }
+          }))
+        })}
+      </script>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="text-3xl lg:text-4xl font-bold text-white mb-12">
           Ответы на вопросы
@@ -21,7 +36,7 @@ export const FAQ: React.FC = () => {
             const isOpen = openIndex === index;
             // Generate number like "01", "02"
             const number = (index + 1).toString().padStart(2, '0');
-            
+
             return (
               <div key={index} className="border-t border-slate-800 last:border-b border-slate-800">
                 <button
@@ -30,25 +45,22 @@ export const FAQ: React.FC = () => {
                 >
                   <div className="flex items-start gap-6 md:gap-10">
                     {/* Number */}
-                    <span className={`text-2xl md:text-3xl font-bold transition-colors duration-300 flex-shrink-0 ${
-                      isOpen ? 'text-red-600' : 'text-slate-600 group-hover:text-slate-500'
-                    }`}>
+                    <span className={`text-2xl md:text-3xl font-bold transition-colors duration-300 flex-shrink-0 ${isOpen ? 'text-red-600' : 'text-slate-600 group-hover:text-slate-500'
+                      }`}>
                       {number}
                     </span>
 
                     <div className="flex-grow pr-8">
                       {/* Question */}
-                      <h3 className={`text-xl md:text-2xl font-bold transition-colors duration-300 mb-2 ${
-                        isOpen ? 'text-white' : 'text-slate-300 group-hover:text-white'
-                      }`}>
+                      <h3 className={`text-xl md:text-2xl font-bold transition-colors duration-300 mb-2 ${isOpen ? 'text-white' : 'text-slate-300 group-hover:text-white'
+                        }`}>
                         {faq.question}
                       </h3>
 
                       {/* Answer (Accordion) */}
-                      <div 
-                        className={`grid transition-all duration-300 ease-in-out ${
-                          isOpen ? 'grid-rows-[1fr] opacity-100 pt-2' : 'grid-rows-[0fr] opacity-0 pt-0'
-                        }`}
+                      <div
+                        className={`grid transition-all duration-300 ease-in-out ${isOpen ? 'grid-rows-[1fr] opacity-100 pt-2' : 'grid-rows-[0fr] opacity-0 pt-0'
+                          }`}
                       >
                         <div className="overflow-hidden">
                           <p className="text-slate-400 text-base leading-relaxed md:max-w-2xl">
