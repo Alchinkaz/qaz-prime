@@ -54,7 +54,7 @@ export const Hero: React.FC = () => {
                 <div className="absolute inset-x-0 bottom-0 h-2/3 bg-gradient-to-t from-red-600/20 to-transparent rounded-t-3xl blur-2xl opacity-50"></div>
 
                 {/* Founder Badge - Desktop/Tablet */}
-                <div className="absolute top-12 left-0 lg:-left-2 z-20 animate-fade-in-up">
+                <div className="absolute top-24 left-0 lg:-left-2 z-20 animate-fade-in-up">
                   <div className="bg-slate-900/80 backdrop-blur-md border border-slate-700/50 p-4 rounded-2xl shadow-2xl flex flex-col gap-1 max-w-[200px]">
                     <div className="text-white font-bold text-sm leading-tight">Биржан Жексембеков</div>
                     <div className="text-slate-400 text-[10px] leading-tight font-medium uppercase tracking-tight">Основатель и руководитель QazPrime</div>
@@ -82,7 +82,7 @@ export const Hero: React.FC = () => {
       <div className="md:hidden flex flex-col bg-slate-950 pt-12">
         {/* Founder Badge - Mobile */}
         <div className="px-6 mb-6 animate-fade-in-up">
-          <div className="inline-flex flex-col gap-1 bg-slate-900/50 backdrop-blur-md border border-slate-800 p-4 rounded-xl w-full max-w-sm mx-auto">
+          <div className="flex flex-col gap-1 bg-slate-900/50 backdrop-blur-md border border-slate-800 p-4 rounded-xl w-full max-w-sm mx-auto text-center items-center">
             <div className="text-white font-bold text-base leading-tight">Биржан Жексембеков</div>
             <div className="text-slate-400 text-[11px] leading-tight font-medium uppercase tracking-tight">Основатель и руководитель QazPrime</div>
           </div>
