@@ -8,9 +8,55 @@ const MARQUEE_ITEMS = [
 ];
 
 export const RunningLine: React.FC = () => {
+  const scrollRef = React.useRef<HTMLDivElement>(null);
+  const [isInteracting, setIsInteracting] = React.useState(false);
+
+  React.useEffect(() => {
+    const scrollContainer = scrollRef.current;
+    if (!scrollContainer) return;
+
+    let animationFrameId: number;
+    let lastTimestamp: number;
+
+    const scroll = (timestamp: number) => {
+      if (!lastTimestamp) lastTimestamp = timestamp;
+      const delta = timestamp - lastTimestamp;
+      lastTimestamp = timestamp;
+
+      if (!isInteracting) {
+        // Average speed: ~0.1px per ms. Faster on mobile to compensate for width.
+        const speed = window.innerWidth < 768 ? 0.15 : 0.1;
+        scrollContainer.scrollLeft += speed * delta;
+
+        const maxScroll = scrollContainer.scrollWidth / 3;
+        if (scrollContainer.scrollLeft >= maxScroll) {
+          scrollContainer.scrollLeft -= maxScroll;
+        }
+      }
+
+      animationFrameId = requestAnimationFrame(scroll);
+    };
+
+    animationFrameId = requestAnimationFrame(scroll);
+    return () => cancelAnimationFrame(animationFrameId);
+  }, [isInteracting]);
+
   return (
-    <div className="bg-slate-950/50 backdrop-blur-md border-t border-b border-slate-800 py-5 overflow-hidden select-none">
-      <div className="flex whitespace-nowrap animate-marquee">
+    <div className="bg-slate-950/50 backdrop-blur-md border-t border-b border-slate-800 py-5 select-none relative">
+      <div
+        ref={scrollRef}
+        className="flex whitespace-nowrap overflow-x-auto scrollbar-hide cursor-grab active:cursor-grabbing"
+        onMouseEnter={() => setIsInteracting(true)}
+        onMouseLeave={() => setIsInteracting(false)}
+        onTouchStart={() => setIsInteracting(true)}
+        onTouchEnd={() => setIsInteracting(false)}
+        onWheel={() => {
+          setIsInteracting(true);
+          // Resume after period of inactivity
+          const timer = setTimeout(() => setIsInteracting(false), 2000);
+          return () => clearTimeout(timer);
+        }}
+      >
         {/* First set of items */}
         <div className="flex shrink-0 items-center">
           {MARQUEE_ITEMS.map((item, index) => (
@@ -47,29 +93,12 @@ export const RunningLine: React.FC = () => {
       </div>
 
       <style>{`
-        @keyframes marquee {
-          0% {
-            transform: translateX(0);
-          }
-          100% {
-            transform: translateX(-33.333%);
-          }
+        .scrollbar-hide::-webkit-scrollbar {
+          display: none;
         }
-        .animate-marquee {
-          animation: marquee 20s linear infinite;
-        }
-        @media (max-width: 768px) {
-          .animate-marquee {
-            animation-duration: 12s;
-          }
-        }
-        @media (max-width: 480px) {
-          .animate-marquee {
-            animation-duration: 8s;
-          }
-        }
-        .animate-marquee:hover {
-          animation-play-state: paused;
+        .scrollbar-hide {
+          -ms-overflow-style: none;
+          scrollbar-width: none;
         }
       `}</style>
     </div>
