@@ -8,30 +8,30 @@ export const Hero: React.FC = () => {
   };
 
   return (
-    <div className="relative bg-slate-950 md:overflow-hidden min-h-screen md:h-screen flex flex-col">
+    <div className="relative bg-slate-950 overflow-hidden h-screen flex flex-col">
       {/* Background Gradients */}
       <div className="absolute top-0 left-1/4 w-96 h-96 bg-red-600/20 rounded-full blur-[128px] -z-10"></div>
       <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-blue-600/10 rounded-full blur-[128px] -z-10"></div>
 
       {/* Main Content Area */}
-      <div className="flex-1 flex items-center pt-32 md:pt-32 pb-0 md:overflow-hidden">
+      <div className="flex-1 flex items-center pt-24 md:pt-32 pb-0 overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full h-full flex flex-col">
           <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center h-full">
 
             {/* Text Content */}
-            <div className="relative z-10 flex flex-col items-center text-center md:items-start md:text-left py-6 md:py-12">
+            <div className="relative z-10 flex flex-col items-center text-center md:items-start md:text-left py-6 md:py-12 shrink-0">
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-800/50 border border-slate-700 backdrop-blur-sm mb-6">
                 <span className="text-xs font-medium text-red-500 tracking-wide uppercase">Юридическая защита 24/7</span>
               </div>
 
-              <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold text-white tracking-tight mb-6 leading-tight">
+              <h1 className="text-2xl md:text-5xl lg:text-6xl font-bold text-white tracking-tight mb-4 md:mb-6 leading-tight">
                 ИЗБАВИМ ВАС ОТ&nbsp;ДОЛГОВ <br />
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-red-700">
                   И ПРОБЛЕМ С&nbsp;БАНКАМИ
                 </span>
               </h1>
 
-              <p className="text-base md:text-lg text-slate-400 mb-8 max-w-lg leading-relaxed md:border-l-2 border-red-600 md:pl-4">
+              <p className="text-sm md:text-lg text-slate-400 mb-6 md:mb-8 max-w-lg leading-relaxed md:border-l-2 border-red-600 md:pl-4">
                 Защита имущества, оспаривание сделок, споры с МФО и полное списание долгов через банкротство.
               </p>
 
@@ -47,13 +47,13 @@ export const Hero: React.FC = () => {
               </div>
             </div>
 
-            {/* Image Content - Large on mobile, constrained on desktop */}
-            <div className="relative flex-1 w-full h-[450px] md:h-full min-h-0 flex items-end justify-center md:justify-end mt-4 md:mt-0">
+            {/* Image Content - Constrained to available space to keep marquee visible */}
+            <div className="relative flex-1 h-full min-h-0 flex items-end justify-center md:justify-end">
               <div className="absolute inset-x-0 bottom-0 h-2/3 bg-gradient-to-t from-red-600/20 to-transparent rounded-t-3xl blur-2xl opacity-50"></div>
               <img
                 src="/hero.png"
                 alt="Юридическая защита"
-                className="relative z-10 w-full md:w-auto max-w-full h-full md:max-h-full object-contain object-bottom drop-shadow-2xl"
+                className="relative z-10 max-w-full max-h-full object-contain object-bottom drop-shadow-2xl"
               />
             </div>
 
@@ -61,8 +61,8 @@ export const Hero: React.FC = () => {
         </div>
       </div>
 
-      {/* Marquee - Naturally follows the content on mobile, sits at bottom on desktop */}
-      <div className="relative z-20 shrink-0 md:absolute md:bottom-0 md:left-0 md:right-0">
+      {/* Marquee - Sticks to bottom of h-screen container */}
+      <div className="relative z-20 shrink-0">
         <RunningLine />
       </div>
     </div>
