@@ -13,7 +13,7 @@ import { FloatingWA } from './components/FloatingWA';
 
 function App() {
   return (
-    <div className="min-h-screen bg-slate-950 font-sans text-slate-100 selection:bg-red-600 selection:text-white">
+    <div className="min-h-screen bg-slate-950 font-sans text-slate-100 selection:bg-red-600 selection:text-white overflow-x-hidden">
       <Navbar />
       <Hero />
       <Stats />
