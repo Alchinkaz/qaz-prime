@@ -56,16 +56,16 @@ export const RunningLine: React.FC = () => {
           }
         }
         .animate-marquee {
-          animation: marquee 40s linear infinite;
+          animation: marquee 20s linear infinite;
         }
         @media (max-width: 768px) {
           .animate-marquee {
-            animation-duration: 25s;
+            animation-duration: 12s;
           }
         }
         @media (max-width: 480px) {
           .animate-marquee {
-            animation-duration: 15s;
+            animation-duration: 8s;
           }
         }
         .animate-marquee:hover {
