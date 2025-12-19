@@ -56,10 +56,6 @@ export const Hero: React.FC = () => {
                 {/* Founder Badge - Desktop/Tablet */}
                 <div className="absolute top-12 left-0 lg:-left-2 z-20 animate-fade-in-up">
                   <div className="bg-slate-900/80 backdrop-blur-md border border-slate-700/50 p-4 rounded-2xl shadow-2xl flex flex-col gap-1 max-w-[200px]">
-                    <div className="flex items-center gap-2">
-                      <div className="w-1.5 h-1.5 rounded-full bg-red-600 animate-pulse"></div>
-                      <span className="text-[10px] text-red-500 uppercase font-bold tracking-widest">Эксперт</span>
-                    </div>
                     <div className="text-white font-bold text-sm leading-tight">Биржан Жексембеков</div>
                     <div className="text-slate-400 text-[10px] leading-tight font-medium uppercase tracking-tight">Основатель и руководитель QazPrime</div>
                   </div>
@@ -85,12 +81,8 @@ export const Hero: React.FC = () => {
       {/* Mobile-Only Section: Large Image and Marquee (Appears after h-screen) */}
       <div className="md:hidden flex flex-col bg-slate-950 pt-12">
         {/* Founder Badge - Mobile */}
-        <div className="px-6 mb-6">
+        <div className="px-6 mb-6 animate-fade-in-up">
           <div className="inline-flex flex-col gap-1 bg-slate-900/50 backdrop-blur-md border border-slate-800 p-4 rounded-xl w-full max-w-sm mx-auto">
-            <div className="flex items-center gap-2">
-              <div className="w-1.5 h-1.5 rounded-full bg-red-600"></div>
-              <span className="text-[10px] text-red-500 uppercase font-bold tracking-widest">Эксперт проекта</span>
-            </div>
             <div className="text-white font-bold text-base leading-tight">Биржан Жексембеков</div>
             <div className="text-slate-400 text-[11px] leading-tight font-medium uppercase tracking-tight">Основатель и руководитель QazPrime</div>
           </div>
