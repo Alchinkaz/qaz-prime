@@ -21,7 +21,7 @@ export const Hero: React.FC = () => {
             <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center h-full min-h-0">
 
               {/* Text Content */}
-              <div className="relative z-10 flex flex-col items-center text-center md:items-start md:text-left py-4 md:py-8 md:mt-12 shrink-0">
+              <div className="relative z-10 flex flex-col items-center text-center md:items-start md:text-left py-4 md:py-8 md:mt-24 shrink-0">
                 <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-800/50 border border-slate-700 backdrop-blur-sm mb-4 md:mb-6">
                   <span className="text-xs font-medium text-red-500 tracking-wide uppercase">Юридическая защита 24/7</span>
                 </div>
