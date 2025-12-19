@@ -63,7 +63,7 @@ export const Hero: React.FC = () => {
         </div>
 
         {/* Desktop Marquee (Visible from tablet upwards) */}
-        <div className="hidden md:block absolute bottom-0 left-0 right-0 z-20">
+        <div className="hidden md:block relative z-20 shrink-0">
           <RunningLine />
         </div>
       </div>
