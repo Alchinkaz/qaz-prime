@@ -24,8 +24,8 @@ export const RunningLine: React.FC = () => {
       lastTimestamp = timestamp;
 
       if (!isInteracting) {
-        // Average speed: ~0.1px per ms. Faster on mobile to compensate for width.
-        const speed = window.innerWidth < 768 ? 0.15 : 0.1;
+        // Adjusted speed for better readability: ~0.04px per ms for desktop, slightly more for mobile.
+        const speed = window.innerWidth < 768 ? 0.06 : 0.04;
         scrollContainer.scrollLeft += speed * delta;
 
         const maxScroll = scrollContainer.scrollWidth / 3;
