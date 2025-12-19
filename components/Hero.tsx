@@ -15,9 +15,9 @@ export const Hero: React.FC = () => {
 
       {/* Hero Section - Screen Height on Desktop/Tablet */}
       <div className="relative h-screen flex flex-col overflow-hidden">
-        {/* Main Content Area - wider max-width for large monitors */}
+        {/* Main Content Area - restored standard max-width for balance */}
         <div className="flex-1 min-h-0 flex items-center pt-20 md:pt-24 pb-0 overflow-hidden">
-          <div className="max-w-7xl 2xl:max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 w-full h-full flex flex-col justify-center">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full h-full flex flex-col justify-center">
             <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center h-full min-h-0">
 
               {/* Text Content */}
@@ -55,7 +55,7 @@ export const Hero: React.FC = () => {
                 <img
                   src="/hero.png"
                   alt="Юридическая защита"
-                  className="relative z-10 max-w-full max-h-[95%] object-contain object-bottom drop-shadow-2xl 2xl:scale-110 transition-transform duration-500"
+                  className="relative z-10 max-w-full max-h-[95%] object-contain object-bottom drop-shadow-2xl"
                 />
               </div>
 
