@@ -1,5 +1,6 @@
 import React from 'react';
 import { Button } from './Button';
+import { RunningLine } from './RunningLine';
 
 export const Hero: React.FC = () => {
   const scrollToContact = () => {
@@ -66,6 +67,9 @@ export const Hero: React.FC = () => {
           </div>
 
         </div>
+      </div>
+      <div className="absolute bottom-0 left-0 right-0 z-20">
+        <RunningLine />
       </div>
     </div>
   );

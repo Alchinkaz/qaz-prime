@@ -9,7 +9,7 @@ const MARQUEE_ITEMS = [
 
 export const RunningLine: React.FC = () => {
     return (
-        <div className="bg-slate-900 border-b border-slate-800 pb-4 pt-1 overflow-hidden select-none">
+        <div className="bg-slate-950/50 backdrop-blur-md border-t border-slate-800 py-5 overflow-hidden select-none">
             <div className="flex whitespace-nowrap animate-marquee">
                 {/* First set of items */}
                 <div className="flex shrink-0 items-center">
