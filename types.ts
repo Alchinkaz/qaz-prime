@@ -3,6 +3,7 @@ export interface ServiceItem {
   id: number;
   title: string;
   items: string[];
+  description?: string;
 }
 
 export interface FAQItem {
