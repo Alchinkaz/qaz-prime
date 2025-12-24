@@ -45,14 +45,9 @@ export const Services: React.FC = () => {
                 {service.title}
               </h3>
 
-              <ul className="space-y-3 mb-8 flex-grow">
-                {service.items.slice(0, 3).map((item, idx) => (
-                  <li key={idx} className="text-slate-400 text-sm flex items-start group-hover:text-slate-300 transition-colors">
-                    <span className="w-1.5 h-1.5 bg-red-600/50 rounded-full mt-1.5 mr-2 flex-shrink-0"></span>
-                    {item}
-                  </li>
-                ))}
-              </ul>
+              <p className="text-slate-400 text-sm line-clamp-3 mb-8 flex-grow">
+                {service.description}
+              </p>
 
               <button
                 onClick={() => setSelectedService(service)}
@@ -89,24 +84,23 @@ export const Services: React.FC = () => {
                 </h3>
               </div>
 
-              <div className="space-y-6">
-                <p className="text-slate-300 text-lg leading-relaxed">
-                  {selectedService.description}
-                </p>
+              <div className="space-y-8">
+                <div className="space-y-6">
+                  <p className="text-slate-300 text-lg leading-relaxed">
+                    {selectedService.description}
+                  </p>
 
-                <div className="bg-slate-950/50 rounded-2xl p-6 border border-slate-800/50">
-                  <h4 className="text-white font-bold mb-4 uppercase tracking-wider text-sm opacity-50">Что входит в услугу:</h4>
                   <ul className="space-y-4">
                     {selectedService.items.map((item, idx) => (
-                      <li key={idx} className="flex items-start gap-3 text-slate-300">
-                        <CheckCircle2 className="text-red-600 shrink-0 mt-0.5" size={20} />
-                        <span className="text-base">{item}</span>
+                      <li key={idx} className="flex items-start gap-3 text-slate-400">
+                        <CheckCircle2 className="text-red-600 shrink-0 mt-1" size={20} />
+                        <span className="text-base text-slate-300">{item}</span>
                       </li>
                     ))}
                   </ul>
                 </div>
 
-                <div className="pt-4">
+                <div className="pt-2">
                   <Button
                     onClick={scrollToContact}
                     className="w-full py-4 text-lg justify-center shadow-xl shadow-red-600/20"
