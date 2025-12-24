@@ -51,15 +51,15 @@ export const Hero: React.FC = () => {
                   <span className="text-xs font-medium text-red-500 tracking-wide uppercase">Юридическая защита 24/7</span>
                 </div>
 
-                <h1 className="text-2xl md:text-4xl lg:text-6xl font-bold text-white tracking-tight mb-4 leading-tight">
-                  ИЗБАВИМ ВАС ОТ&nbsp;ДОЛГОВ <br />
+                <h1 className="text-2xl md:text-4xl lg:text-6xl font-bold text-white tracking-tight mb-4 leading-tight uppercase">
+                  ЮРИДИЧЕСКАЯ ЗАЩИТА <br />
                   <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-red-700">
-                    И ПРОБЛЕМ С&nbsp;БАНКАМИ
+                    В СЛОЖНЫХ СПОРАХ
                   </span>
                 </h1>
 
                 <p className="text-sm md:text-lg text-slate-400 mb-6 max-w-lg leading-relaxed md:border-l-2 border-red-600 md:pl-4">
-                  Защита имущества, оспаривание сделок, споры с МФО и полное списание долгов через банкротство.
+                  Судебное взыскание и защита от взыскания, медиация, оспаривание сделок, споры с банками и МФО, выселение и представительство в судах всех инстанций.
                 </p>
 
                 <div className="w-full md:w-auto">

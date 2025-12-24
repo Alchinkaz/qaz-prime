@@ -6,29 +6,29 @@ export const PHONE_HREF = "tel:+77000959510";
 export const WHATSAPP_URL = "https://wa.me/77000959510";
 
 export const STATS: StatItem[] = [
-  { 
-    value: "15 000+", 
-    label: "успешных кейсов",
-    numericValue: 15000,
+  {
+    value: "10 000+",
+    label: "Успешных кейсов",
+    numericValue: 10000,
     suffix: "+"
   },
-  { 
-    value: "500+", 
-    label: "судебных дел",
-    numericValue: 500,
+  {
+    value: "300+",
+    label: "Судебных процессов",
+    numericValue: 300,
     suffix: "+"
   },
-  { 
-    value: "2,4 млрд", 
-    label: "тенге присудили",
-    numericValue: 2.4,
+  {
+    value: "1,2 млрд",
+    label: "Тенге вернули клиентам",
+    numericValue: 1.2,
     suffix: " млрд",
     isDecimal: true
   },
-  { 
-    value: "92%", 
-    label: "побед в суде",
-    numericValue: 92,
+  {
+    value: "95%",
+    label: "Выигранных дел",
+    numericValue: 95,
     suffix: "%"
   },
 ];
