@@ -89,7 +89,7 @@ export const Hero: React.FC = () => {
                 <img
                   src="/hero.png"
                   alt="Юридическая защита"
-                  className="relative z-10 max-w-full max-h-[95%] object-contain object-bottom drop-shadow-2xl"
+                  className="relative z-10 max-w-full max-h-[105%] object-contain object-bottom drop-shadow-2xl scale-110 origin-bottom"
                 />
               </div>
 
@@ -121,7 +121,7 @@ export const Hero: React.FC = () => {
           <img
             src="/hero.png"
             alt="Юридическая защита эксперта"
-            className="relative z-10 w-full h-full object-contain object-bottom drop-shadow-2xl px-4 scale-110"
+            className="relative z-10 w-full h-full object-contain object-bottom drop-shadow-2xl px-4 scale-125 origin-bottom"
           />
         </div>
         <div className="relative z-20">
