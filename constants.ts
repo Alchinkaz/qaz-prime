@@ -1,5 +1,5 @@
 import { ServiceItem, FAQItem, StepItem, StatItem } from './types';
-import { Scale, Gavel, Home, Briefcase, GraduationCap, UserCheck } from 'lucide-react';
+import { Scale, Gavel, Home, Briefcase, GraduationCap, Handshake } from 'lucide-react';
 
 export const PHONE_NUMBER = "+7 700 095 95 10";
 export const PHONE_HREF = "tel:+77000959510";
@@ -76,7 +76,7 @@ export const SERVICES: (ServiceItem & { icon: any })[] = [
     items: [
       "Подготовка исков и отзывов",
       "Представительство в судах",
-      "Медиация и мировые соглашения"
+      "Мировые соглашения"
     ]
   },
   {
@@ -114,13 +114,13 @@ export const SERVICES: (ServiceItem & { icon: any })[] = [
   },
   {
     id: 6,
-    title: "Индивидуальные решения",
-    icon: UserCheck,
-    description: "Юриспруденция — это всегда индивидуальный подход. Если ваша проблема нестандартна или требует деликатного подхода, мы разработаем персональную стратегию защиты специально для вас.",
+    title: "Медиация",
+    icon: Handshake,
+    description: "Эффективный способ мирного урегулирования споров при участии нейтрального посредника. Мы помогаем достичь взаимовыгодного соглашения в гражданских, семейных и коммерческих конфликтах, сохраняя ваше время, деньги и деловую репутацию.",
     items: [
-      "Нестандартные вопросы",
-      "Личная консультация",
-      "Персональная стратегия"
+      "Мирное решение споров",
+      "Медиативные соглашения",
+      "Внесудебное урегулирование"
     ]
   }
 ];
