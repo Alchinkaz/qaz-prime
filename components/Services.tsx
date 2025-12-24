@@ -69,37 +69,37 @@ export const Services: React.FC = () => {
       {selectedService && (
         <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-slate-950/80 backdrop-blur-sm animate-in fade-in duration-300">
           <div
-            className="bg-slate-900 border border-slate-800 w-full max-w-2xl rounded-3xl overflow-hidden relative shadow-2xl animate-in zoom-in-95 duration-300"
+            className="bg-slate-900 border border-slate-800 w-full max-w-xl rounded-3xl overflow-hidden relative shadow-2xl animate-in zoom-in-95 duration-300 flex flex-col max-h-[90dvh]"
             onClick={(e) => e.stopPropagation()}
           >
             <button
               onClick={() => setSelectedService(null)}
-              className="absolute top-6 right-6 text-slate-400 hover:text-white transition-colors z-10"
+              className="absolute top-4 right-4 md:top-6 md:right-6 text-slate-400 hover:text-white transition-colors z-[110] bg-slate-900/50 backdrop-blur-sm rounded-full p-1"
             >
               <X size={24} />
             </button>
 
-            <div className="p-8 md:p-12">
-              <div className="flex items-center gap-4 mb-6">
-                <div className="w-14 h-14 bg-red-600 rounded-2xl flex items-center justify-center text-white shadow-lg shadow-red-600/20">
-                  <selectedService.icon size={32} />
+            <div className="p-6 md:p-10 overflow-y-auto">
+              <div className="flex items-center gap-4 mb-6 md:mb-8">
+                <div className="w-10 h-10 md:w-12 md:h-12 bg-red-600 rounded-xl flex items-center justify-center text-white shadow-lg shadow-red-600/20 shrink-0">
+                  <selectedService.icon size={24} />
                 </div>
-                <h3 className="text-2xl md:text-3xl font-bold text-white">
+                <h3 className="text-xl md:text-2xl font-bold text-white leading-tight">
                   {selectedService.title}
                 </h3>
               </div>
 
-              <div className="space-y-8">
-                <div className="space-y-6">
-                  <p className="text-slate-300 text-lg leading-relaxed">
+              <div className="space-y-6 md:space-y-8">
+                <div className="space-y-4 md:space-y-6">
+                  <p className="text-slate-300 text-base md:text-lg leading-relaxed">
                     {selectedService.description}
                   </p>
 
-                  <ul className="space-y-4">
+                  <ul className="space-y-3 md:space-y-4">
                     {selectedService.items.map((item, idx) => (
                       <li key={idx} className="flex items-start gap-3 text-slate-400">
-                        <CheckCircle2 className="text-red-600 shrink-0 mt-1" size={20} />
-                        <span className="text-base text-slate-300">{item}</span>
+                        <CheckCircle2 className="text-red-600 shrink-0 mt-1" size={18} />
+                        <span className="text-sm md:text-base text-slate-300">{item}</span>
                       </li>
                     ))}
                   </ul>
@@ -108,7 +108,7 @@ export const Services: React.FC = () => {
                 <div className="pt-2">
                   <Button
                     onClick={scrollToContact}
-                    className="w-full py-4 text-lg justify-center shadow-xl shadow-red-600/20"
+                    className="w-full py-3.5 md:py-4 text-base md:text-lg justify-center shadow-xl shadow-red-600/20"
                   >
                     Заказать услугу
                   </Button>
