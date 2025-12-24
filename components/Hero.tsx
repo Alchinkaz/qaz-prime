@@ -121,7 +121,7 @@ export const Hero: React.FC = () => {
           <img
             src="/hero.png"
             alt="Юридическая защита эксперта"
-            className="relative z-10 w-full h-full object-contain object-bottom drop-shadow-2xl px-4 scale-125 origin-bottom"
+            className="relative z-10 w-full h-full object-contain object-bottom drop-shadow-2xl px-4 scale-110"
           />
         </div>
         <div className="relative z-20">
