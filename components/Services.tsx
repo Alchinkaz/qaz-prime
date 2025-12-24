@@ -45,9 +45,14 @@ export const Services: React.FC = () => {
                 {service.title}
               </h3>
 
-              <p className="text-slate-400 text-sm line-clamp-3 mb-8 flex-grow">
-                {service.description}
-              </p>
+              <ul className="space-y-2 mb-8 flex-grow">
+                {service.items.slice(0, 3).map((item, idx) => (
+                  <li key={idx} className="text-slate-400 text-[13px] flex items-center group-hover:text-slate-300 transition-colors">
+                    <span className="w-1 h-1 bg-red-600 rounded-full mr-3 flex-shrink-0"></span>
+                    {item}
+                  </li>
+                ))}
+              </ul>
 
               <button
                 onClick={() => setSelectedService(service)}
