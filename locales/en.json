@@ -10,63 +10,68 @@
         "badge": "Legal Protection 24/7",
         "title_1": "LEGAL PROTECTION",
         "title_2": "IN COMPLEX DISPUTES",
-        "subtitle": "Court recovery and protection from recovery, mediation, challenging transactions, disputes with banks and MFIs, eviction and representation in courts of all instances.",
+        "subtitle": "Debt recovery and protection from collection, mediation, challenging transactions, disputes with banks and MFIs, eviction, and representation in all court instances.",
         "cta": "Get Consultation",
-        "consent": "By sending an application, you agree to the processing of personal data",
+        "consent": "By submitting an application, you agree to the processing of personal data",
         "founder_badge_title": "Birzhan Zheksembekov",
         "founder_badge_desc": "Founder and Head of QazPrime"
     },
+    "marquee": {
+        "items": [
+            "Debt recovery and protection from unfounded claims",
+            "Disputes with banks, MFIs, and collectors",
+            "Real Estate: transactions, arrests, eviction, pledge disputes",
+            "Representation in courts and enforcement proceedings"
+        ]
+    },
     "stats": {
+        "title": "Why clients choose QazPrime",
+        "text": "We specialize in protecting clients' interests in complex civil and economic disputes. Our goal is to achieve real results: recovery of money, protection of property, or conclusion of an amicable agreement.",
         "successful": "Successful cases",
         "court": "Court processes",
         "money": "Tenge returned to clients",
         "won": "Won cases",
         "billion": "billion"
     },
-    "steps": {
-        "step_01_title": "Initial Consultation",
-        "step_01_desc": "You leave an application or write on WhatsApp. We analyze your situation, examine documents, explain options and risks.",
-        "step_02_title": "Legal Strategy",
-        "step_02_desc": "We form a plan: claim, negotiations, mediation, court, enforcement proceedings. We discuss estimated timelines and budget.",
-        "step_03_title": "Contract and Work",
-        "step_03_desc": "We sign a contract, fix the scope of services and cost. We prepare documents, file with the court, participate in hearings, accompany negotiations.",
-        "step_04_title": "Bringing to Result",
-        "step_04_desc": "We get the court decision and achieve actual execution: recovery, eviction, removal of arrests, changes in encumbrances."
+    "about": {
+        "title": "Professional Legal Assistance",
+        "text": "QazPrime is a law firm created for those who need real results, not theory. We work with debts, real estate, and disputes with banks and MFIs."
     },
     "services": {
-        "title": "Services",
-        "more": "Details",
+        "title": "Complex questions require simple solutions",
+        "desc": "We provide comprehensive legal support, focusing on protecting your assets and legal interests.",
+        "more": "More",
         "order": "Order Service",
         "item_1": {
-            "title": "Debts, Credits and MFIs",
-            "desc": "Professional assistance in disputes with credit organizations. We know how to stop debt collector pressure, challenge illegal fines, and achieve real debt write-off or comfortable payment terms.",
+            "title": "Debts, Credits, and MFIs",
+            "desc": "Professional assistance in disputes with credit organizations. We know how to stop collector pressure, challenge illegal fines, and achieve real debt write-offs.",
             "list": [
                 "Debt recovery",
                 "Negotiations with banks and MFIs",
-                "Challenging forced services"
+                "Challenging imposed services"
             ]
         },
         "item_2": {
             "title": "Court Disputes",
-            "desc": "Comprehensive support of your interests in courts of all instances. From situation analysis and document preparation to control over actual execution by bailiffs.",
+            "desc": "Comprehensive support of your interests in courts of all instances. From case analysis to control over the actual execution of the decision.",
             "list": [
                 "Preparation of claims and responses",
                 "Representation in courts",
-                "Settlement agreements"
+                "Amicable agreements"
             ]
         },
         "item_3": {
             "title": "Real Estate",
-            "desc": "Protection of your rights to housing and commercial objects. We ensure transaction security, help protect property from arrest and resolve any housing conflicts legally.",
+            "desc": "Protecting your rights to housing and commercial objects. We ensure transaction security and help solve any housing conflicts legally.",
             "list": [
-                "Purchase and sale transactions",
+                "Sale and purchase transactions",
                 "Challenging transactions",
                 "Eviction disputes"
             ]
         },
         "item_4": {
             "title": "Business and Contracts",
-            "desc": "Legal foundation for your business. We help minimize risks in contracts, protect interests in disputes with counterparties and ensure the legal security of your activities.",
+            "desc": "Legal foundation for your business. We help minimize risks in contracts and protect interests in disputes with counterparties.",
             "list": [
                 "Contract development",
                 "Business support",
@@ -75,64 +80,101 @@
         },
         "item_5": {
             "title": "Consumer Disputes",
-            "desc": "Money back for low-quality or non-rendered services. We specialize in disputes with online platforms, schools and info-business. We will return your money legally.",
+            "desc": "Refund for low-quality or unprovided services. Specialists in disputes with online platforms, schools, and info-businesses.",
             "list": [
                 "Disputes with online schools",
                 "Refund of funds",
-                "Consumer protection"
+                "Consumer rights protection"
             ]
         },
         "item_6": {
             "title": "Mediation",
-            "desc": "An effective way for peaceful dispute resolution with a neutral mediator's participation. We help reach a mutually beneficial agreement in civil, family and commercial conflicts, saving your time, money and business reputation.",
+            "desc": "Effective way of peaceful settlement of disputes with the participation of a neutral mediator. We help reach mutually beneficial agreements.",
             "list": [
                 "Peaceful dispute resolution",
-                "Mediative agreements",
+                "Mediation agreements",
                 "Out-of-court settlement"
             ]
         }
     },
-    "about": {
-        "title": "About QazPrime",
-        "text": "We specialize in protecting client interests in complex civil and economic disputes. Our goal is not just to represent you in court, but to achieve a real result: debt recovery, property protection or a settlement agreement."
-    },
-    "founder": {
-        "name": "Birzhan Zheksembekov",
-        "subtitle": "Founder of QazPrime, lawyer and professional mediator",
-        "list": [
-            "Practicing lawyer and professional mediator (out-of-court dispute resolution)",
-            "Specialization — court disputes, debt recovery and property protection",
-            "Representation in courts of all instances and support of enforcement proceedings",
-            "Practical approach: result-oriented and focused on peaceful conflict resolution"
-        ],
-        "quote": "«My task is to protect your money and property, not just to 'write a claim'. I accompany the client to the result and explain every step in plain language.»"
+    "steps": {
+        "title": "Path to financial freedom",
+        "step_01_title": "Primary Consultation",
+        "step_01_desc": "You leave an request or write on WhatsApp. We analyze your situation, look at documents, and explain options and risks.",
+        "step_02_title": "Legal Strategy",
+        "step_02_desc": "We form a plan: claim, negotiations, mediation, court, enforcement proceedings. Discuss timeframes and budget.",
+        "step_03_title": "Contract and Case Work",
+        "step_03_desc": "Negotiate a contract, fix the scope of services and cost. Prepare documents, file in court, participate in hearings.",
+        "step_04_title": "Achieving Results",
+        "step_04_desc": "Get a court decision and achieve actual execution: recovery, eviction, removal of arrests."
     },
     "reviews": {
         "title": "Reviews about QazPrime",
-        "client": "Client"
+        "r1_name": "LLP \"Artex-KZ\"",
+        "r1_text": "Our company expresses gratitude for the high professionalism and quality of work in representing the company's interests in law enforcement agencies and in court.",
+        "r1_initial": "A",
+        "r2_name": "IE \"Amanatov M.\"",
+        "r2_text": "Our company expresses gratitude for the quality services provided and recommends them as a company that maximally satisfies customer requirements.",
+        "r2_initial": "AM",
+        "r3_name": "LLP \"KazExpress Logistics\"",
+        "r3_text": "We express huge gratitude for legal assistance in solving our issues in the Republic of Kazakhstan, representation in court and consultations.",
+        "r3_initial": "KE",
+        "r4_name": "LLP \"Kurylys-Astana\"",
+        "r4_text": "Applied for debt collection. QazPrime lawyers did complex work: from the claim to the actual receipt of money through the CSI.",
+        "r4_initial": "KA",
+        "r5_name": "Beksultanov B.K.",
+        "r5_text": "Helped write off debts through the bankruptcy procedure for individuals. The situation seemed hopeless, but the lawyers handled it properly.",
+        "r5_initial": "B",
+        "r6_name": "LLP \"Dala Tech\"",
+        "r6_text": "Ordered contract development for an IT project. Liked that the lawyers delve into the essence of the business instead of just using templates.",
+        "r6_initial": "DT"
+    },
+    "founder": {
+        "name": "Birzhan T. Zheksembekov",
+        "subtitle": "Founder of QazPrime, Lawyer and Professional Mediator",
+        "list": [
+            "Practicing lawyer and professional mediator (out-of-court dispute resolution)",
+            "Specialization — court disputes, debt collection, and property protection",
+            "Representation in courts and support of enforcement proceedings",
+            "Practical approach: result-oriented and focused on peaceful conflict resolution"
+        ],
+        "quote": "«My task is to protect your money and property, not just to \"write a claim\". I accompany the client to the result and explain every step in plain language.»"
     },
     "faq": {
-        "title": "Frequently Asked Questions",
+        "title": "Questions & Answers",
         "q1": "Is there a free consultation?",
-        "a1": "We can briefly guide you for free: tell you if a trial is needed, what the risks are and what to prepare. A detailed analysis with documents and strategy is a paid consultation.",
+        "a1": "We can briefly guide you on the situation for free. Detailed analysis with document review and strategy development is a paid service.",
         "q2": "How much does a consultation cost?",
-        "a2": "The price starts from 30,000 tenge and depends on complexity. We announce the exact amount after short initial communication.",
-        "q3": "Can you handle cases remotely?",
-        "a3": "Yes, we work throughout the Republic of Kazakhstan: online consultations, document preparation, court participation by proxy.",
-        "q4": "Do you represent interests in court?",
-        "a4": "Yes, we handle complex court support: document preparation, hearing participation, filing appeals, cassations, etc.",
-        "q5": "Will you help at the enforcement stage?",
-        "a5": "Yes, we interact with bailiffs, analyze enforcement documents, and help build a protection or recovery strategy."
+        "a2": "Cost starts from 30,000 tenge and depends on the complexity of the issue and the volume of documents.",
+        "q3": "Can you handle a case remotely?",
+        "a3": "Yes, we work throughout Kazakhstan. Online consultations, electronic filing, and participation in courts via video call.",
+        "q4": "Do you guarantee a result?",
+        "a4": "We guarantee quality legal work and the use of all legal tools to protect your interests.",
+        "q5": "Do you work with individuals or companies?",
+        "a5": "We assist both private individuals (debts, housing, family) and businesses (arbitration, debt collection, contracts)."
     },
     "contact": {
-        "title": "Free Consultation",
-        "subtitle": "Leave an application, and we will contact you within 15 minutes for an initial review of your situation.",
-        "name_label": "Your name",
-        "phone_label": "Phone number",
-        "message_label": "How can we help?",
-        "button": "Send Application"
+        "title": "Contact me today",
+        "desc": "Don't let debts control your life. Fill out the form, and I will contact you within 15 minutes for a free analysis of the situation.",
+        "address": "Almaty, Bostandyk district, Rozybakiev str. 153B",
+        "2gis": "Open in 2GIS",
+        "name_placeholder": "Your name",
+        "phone_placeholder": "Phone number",
+        "desc_placeholder": "Briefly describe the situation",
+        "button": "Get a problem solution",
+        "privacy": "By clicking the button, you agree to the personal data processing policy. Your data is reliably protected.",
+        "success": "Success! Your application has been sent."
     },
     "footer": {
-        "rights": "All rights reserved."
+        "desc": "Legal assistance in Almaty and throughout Kazakhstan. Protecting your interests is our work, which we do professionally.",
+        "contacts": "Contacts",
+        "working_hours": "Working Hours",
+        "mon_fri": "Mon–Fri",
+        "sat_sun": "Sat–Sun",
+        "appointment": "By appointment",
+        "rights": "All rights reserved.",
+        "dev": "Website development",
+        "privacy": "Privacy Policy",
+        "offer": "Terms of Service"
     }
 }
