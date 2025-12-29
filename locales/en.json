@@ -1,0 +1,138 @@
+{
+    "nav": {
+        "about": "About",
+        "services": "Services",
+        "faq": "FAQ",
+        "contacts": "Contacts",
+        "online": "Call us, we are online"
+    },
+    "hero": {
+        "badge": "Legal Protection 24/7",
+        "title_1": "LEGAL PROTECTION",
+        "title_2": "IN COMPLEX DISPUTES",
+        "subtitle": "Court recovery and protection from recovery, mediation, challenging transactions, disputes with banks and MFIs, eviction and representation in courts of all instances.",
+        "cta": "Get Consultation",
+        "consent": "By sending an application, you agree to the processing of personal data",
+        "founder_badge_title": "Birzhan Zheksembekov",
+        "founder_badge_desc": "Founder and Head of QazPrime"
+    },
+    "stats": {
+        "successful": "Successful cases",
+        "court": "Court processes",
+        "money": "Tenge returned to clients",
+        "won": "Won cases",
+        "billion": "billion"
+    },
+    "steps": {
+        "step_01_title": "Initial Consultation",
+        "step_01_desc": "You leave an application or write on WhatsApp. We analyze your situation, examine documents, explain options and risks.",
+        "step_02_title": "Legal Strategy",
+        "step_02_desc": "We form a plan: claim, negotiations, mediation, court, enforcement proceedings. We discuss estimated timelines and budget.",
+        "step_03_title": "Contract and Work",
+        "step_03_desc": "We sign a contract, fix the scope of services and cost. We prepare documents, file with the court, participate in hearings, accompany negotiations.",
+        "step_04_title": "Bringing to Result",
+        "step_04_desc": "We get the court decision and achieve actual execution: recovery, eviction, removal of arrests, changes in encumbrances."
+    },
+    "services": {
+        "title": "Services",
+        "more": "Details",
+        "order": "Order Service",
+        "item_1": {
+            "title": "Debts, Credits and MFIs",
+            "desc": "Professional assistance in disputes with credit organizations. We know how to stop debt collector pressure, challenge illegal fines, and achieve real debt write-off or comfortable payment terms.",
+            "list": [
+                "Debt recovery",
+                "Negotiations with banks and MFIs",
+                "Challenging forced services"
+            ]
+        },
+        "item_2": {
+            "title": "Court Disputes",
+            "desc": "Comprehensive support of your interests in courts of all instances. From situation analysis and document preparation to control over actual execution by bailiffs.",
+            "list": [
+                "Preparation of claims and responses",
+                "Representation in courts",
+                "Settlement agreements"
+            ]
+        },
+        "item_3": {
+            "title": "Real Estate",
+            "desc": "Protection of your rights to housing and commercial objects. We ensure transaction security, help protect property from arrest and resolve any housing conflicts legally.",
+            "list": [
+                "Purchase and sale transactions",
+                "Challenging transactions",
+                "Eviction disputes"
+            ]
+        },
+        "item_4": {
+            "title": "Business and Contracts",
+            "desc": "Legal foundation for your business. We help minimize risks in contracts, protect interests in disputes with counterparties and ensure the legal security of your activities.",
+            "list": [
+                "Contract development",
+                "Business support",
+                "Corporate conflicts"
+            ]
+        },
+        "item_5": {
+            "title": "Consumer Disputes",
+            "desc": "Money back for low-quality or non-rendered services. We specialize in disputes with online platforms, schools and info-business. We will return your money legally.",
+            "list": [
+                "Disputes with online schools",
+                "Refund of funds",
+                "Consumer protection"
+            ]
+        },
+        "item_6": {
+            "title": "Mediation",
+            "desc": "An effective way for peaceful dispute resolution with a neutral mediator's participation. We help reach a mutually beneficial agreement in civil, family and commercial conflicts, saving your time, money and business reputation.",
+            "list": [
+                "Peaceful dispute resolution",
+                "Mediative agreements",
+                "Out-of-court settlement"
+            ]
+        }
+    },
+    "about": {
+        "title": "About QazPrime",
+        "text": "We specialize in protecting client interests in complex civil and economic disputes. Our goal is not just to represent you in court, but to achieve a real result: debt recovery, property protection or a settlement agreement."
+    },
+    "founder": {
+        "name": "Birzhan Zheksembekov",
+        "subtitle": "Founder of QazPrime, lawyer and professional mediator",
+        "list": [
+            "Practicing lawyer and professional mediator (out-of-court dispute resolution)",
+            "Specialization — court disputes, debt recovery and property protection",
+            "Representation in courts of all instances and support of enforcement proceedings",
+            "Practical approach: result-oriented and focused on peaceful conflict resolution"
+        ],
+        "quote": "«My task is to protect your money and property, not just to 'write a claim'. I accompany the client to the result and explain every step in plain language.»"
+    },
+    "reviews": {
+        "title": "Reviews about QazPrime",
+        "client": "Client"
+    },
+    "faq": {
+        "title": "Frequently Asked Questions",
+        "q1": "Is there a free consultation?",
+        "a1": "We can briefly guide you for free: tell you if a trial is needed, what the risks are and what to prepare. A detailed analysis with documents and strategy is a paid consultation.",
+        "q2": "How much does a consultation cost?",
+        "a2": "The price starts from 30,000 tenge and depends on complexity. We announce the exact amount after short initial communication.",
+        "q3": "Can you handle cases remotely?",
+        "a3": "Yes, we work throughout the Republic of Kazakhstan: online consultations, document preparation, court participation by proxy.",
+        "q4": "Do you represent interests in court?",
+        "a4": "Yes, we handle complex court support: document preparation, hearing participation, filing appeals, cassations, etc.",
+        "q5": "Will you help at the enforcement stage?",
+        "a5": "Yes, we interact with bailiffs, analyze enforcement documents, and help build a protection or recovery strategy."
+    },
+    "contact": {
+        "title": "Free Consultation",
+        "subtitle": "Leave an application, and we will contact you within 15 minutes for an initial review of your situation.",
+        "name_label": "Your name",
+        "phone_label": "Phone number",
+        "message_label": "How can we help?",
+        "button": "Send Application"
+    },
+    "footer": {
+        "rights": "All rights reserved."
+    }
+}

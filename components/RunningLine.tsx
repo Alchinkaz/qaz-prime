@@ -1,15 +1,12 @@
 import React from 'react';
-
-const MARQUEE_ITEMS = [
-  "Взыскание долгов и защита от необоснованных требований",
-  "Споры с банками, МФО, коллекторами",
-  "Недвижимость: сделки, аресты, выселение, споры по залогам",
-  "Представительство в судах и исполнительном производстве"
-];
+import { useTranslation } from 'react-i18next';
 
 export const RunningLine: React.FC = () => {
+  const { t, i18n } = useTranslation();
   const scrollRef = React.useRef<HTMLDivElement>(null);
   const [isInteracting, setIsInteracting] = React.useState(false);
+
+  const MARQUEE_ITEMS = t('marquee.items', { returnObjects: true }) as string[];
 
   React.useEffect(() => {
     const scrollContainer = scrollRef.current;

@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
 import { FAQS } from '../constants';
 import { ChevronDown } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 
 export const FAQ: React.FC = () => {
+  const { t, i18n } = useTranslation();
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   const toggleFAQ = (index: number) => {
@@ -16,19 +18,19 @@ export const FAQ: React.FC = () => {
         {JSON.stringify({
           "@context": "https://schema.org",
           "@type": "FAQPage",
-          "mainEntity": FAQS.map(faq => ({
+          "mainEntity": FAQS.map((_, index) => ({
             "@type": "Question",
-            "name": faq.question,
+            "name": t(`faq.q${index + 1}`),
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": faq.answer
+              "text": t(`faq.a${index + 1}`)
             }
           }))
         })}
       </script>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="text-3xl lg:text-4xl font-bold text-white mb-12">
-          Ответы на вопросы
+          {t('faq.title')}
         </h2>
 
         <div className="space-y-0">
@@ -36,6 +38,8 @@ export const FAQ: React.FC = () => {
             const isOpen = openIndex === index;
             // Generate number like "01", "02"
             const number = (index + 1).toString().padStart(2, '0');
+            const question = t(`faq.q${index + 1}`);
+            const answer = t(`faq.a${index + 1}`);
 
             return (
               <div key={index} className="border-t border-slate-800 last:border-b border-slate-800">
@@ -54,7 +58,7 @@ export const FAQ: React.FC = () => {
                       {/* Question */}
                       <h3 className={`text-xl md:text-2xl font-bold transition-colors duration-300 mb-2 ${isOpen ? 'text-white' : 'text-slate-300 group-hover:text-white'
                         }`}>
-                        {faq.question}
+                        {question}
                       </h3>
 
                       {/* Answer (Accordion) */}
@@ -64,7 +68,7 @@ export const FAQ: React.FC = () => {
                       >
                         <div className="overflow-hidden">
                           <p className="text-slate-400 text-base leading-relaxed md:max-w-2xl">
-                            {faq.answer}
+                            {answer}
                           </p>
                         </div>
                       </div>

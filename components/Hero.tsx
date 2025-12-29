@@ -1,8 +1,10 @@
 import React from 'react';
 import { Button } from './Button';
 import { RunningLine } from './RunningLine';
+import { useTranslation } from 'react-i18next';
 
 export const Hero: React.FC = () => {
+  const { t } = useTranslation();
   const scrollToContact = () => {
     document.getElementById('contact-form')?.scrollIntoView({ behavior: 'smooth' });
   };
@@ -48,27 +50,27 @@ export const Hero: React.FC = () => {
               {/* Text Content */}
               <div className="relative z-10 flex flex-col items-center text-center md:items-start md:text-left py-4 md:py-8 md:mt-8 shrink-0">
                 <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-800/50 border border-slate-700 backdrop-blur-sm mb-4 md:mb-6">
-                  <span className="text-xs font-medium text-red-500 tracking-wide uppercase">Юридическая защита 24/7</span>
+                  <span className="text-xs font-medium text-red-500 tracking-wide uppercase">{t('hero.badge')}</span>
                 </div>
 
                 <h1 className="text-2xl md:text-4xl lg:text-6xl font-bold text-white tracking-tight mb-4 leading-tight uppercase">
-                  ЮРИДИЧЕСКАЯ ЗАЩИТА <br />
+                  {t('hero.title_1')} <br />
                   <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-red-700">
-                    В СЛОЖНЫХ СПОРАХ
+                    {t('hero.title_2')}
                   </span>
                 </h1>
 
                 <p className="text-sm md:text-lg text-slate-400 mb-6 max-w-lg leading-relaxed md:border-l-2 border-red-600 md:pl-4">
-                  Судебное взыскание и защита от взыскания, медиация, оспаривание сделок, споры с банками и МФО, выселение и представительство в судах всех инстанций.
+                  {t('hero.subtitle')}
                 </p>
 
                 <div className="w-full md:w-auto">
                   <div className="flex flex-col items-center md:items-start">
                     <Button onClick={scrollToContact} className="w-full md:w-auto px-6 py-2.5 md:px-8 md:py-3 shadow-lg shadow-red-600/20 justify-center whitespace-nowrap mb-4">
-                      Получить консультацию
+                      {t('hero.cta')}
                     </Button>
                     <p className="text-[10px] md:text-xs text-slate-500 leading-tight text-center md:text-left">
-                      Отправляя заявку, вы соглашаетесь на<br className="hidden md:block" /> обработку персональных данных
+                      {t('hero.consent')}
                     </p>
                   </div>
                 </div>
@@ -81,8 +83,8 @@ export const Hero: React.FC = () => {
                 {/* Founder Badge - Desktop/Tablet */}
                 <div className="absolute top-96 lg:top-24 left-0 lg:-left-2 z-20 animate-fade-in-up">
                   <div className="bg-slate-900/80 backdrop-blur-md border border-slate-700/50 p-4 rounded-2xl shadow-2xl flex flex-col gap-1 max-w-[200px]">
-                    <div className="text-white font-bold text-sm leading-tight">Биржан Жексембеков</div>
-                    <div className="text-slate-400 text-[10px] leading-tight font-medium uppercase tracking-tight">Основатель и руководитель QazPrime</div>
+                    <div className="text-white font-bold text-sm leading-tight">{t('hero.founder_badge_title')}</div>
+                    <div className="text-slate-400 text-[10px] leading-tight font-medium uppercase tracking-tight">{t('hero.founder_badge_desc')}</div>
                   </div>
                 </div>
 
@@ -111,8 +113,8 @@ export const Hero: React.FC = () => {
           className={`px-6 mb-6 transition-all duration-1000 ${isBadgeVisible ? 'animate-fade-in-up opacity-100' : 'opacity-0'}`}
         >
           <div className="flex flex-col gap-1 bg-slate-900/50 backdrop-blur-md border border-slate-800 p-4 rounded-xl w-full max-w-sm mx-auto text-center items-center">
-            <div className="text-white font-bold text-base leading-tight">Биржан Жексембеков</div>
-            <div className="text-slate-400 text-[11px] leading-tight font-medium uppercase tracking-tight">Основатель и руководитель QazPrime</div>
+            <div className="text-white font-bold text-base leading-tight">{t('hero.founder_badge_title')}</div>
+            <div className="text-slate-400 text-[11px] leading-tight font-medium uppercase tracking-tight">{t('hero.founder_badge_desc')}</div>
           </div>
         </div>
 

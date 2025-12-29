@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
 import { STEPS } from '../constants';
 import { ChevronDown } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 
 export const Steps: React.FC = () => {
+  const { t, i18n } = useTranslation();
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   const toggleStep = (index: number) => {
@@ -13,13 +15,16 @@ export const Steps: React.FC = () => {
     <div className="bg-slate-950 py-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="text-3xl lg:text-4xl font-bold text-white mb-12">
-          Путь к финансовой свободе
+          {i18n.language === 'ru' ? 'Путь к финансовой свободе' : i18n.language === 'kz' ? 'Қаржылық еркіндікке жол' : 'Path to Financial Freedom'}
         </h2>
 
         <div className="space-y-0">
           {STEPS.map((step, index) => {
             const isOpen = openIndex === index;
-            
+            const stepId = step.step; // "01", "02", etc
+            const translatedTitle = t(`steps.step_${stepId}_title`);
+            const translatedDesc = t(`steps.step_${stepId}_desc`);
+
             return (
               <div key={index} className="border-t border-slate-800 last:border-b border-slate-800">
                 <button
@@ -28,29 +33,26 @@ export const Steps: React.FC = () => {
                 >
                   <div className="flex items-start gap-6 md:gap-10">
                     {/* Number */}
-                    <span className={`text-2xl md:text-3xl font-bold transition-colors duration-300 flex-shrink-0 ${
-                      isOpen ? 'text-red-600' : 'text-slate-600 group-hover:text-slate-500'
-                    }`}>
+                    <span className={`text-2xl md:text-3xl font-bold transition-colors duration-300 flex-shrink-0 ${isOpen ? 'text-red-600' : 'text-slate-600 group-hover:text-slate-500'
+                      }`}>
                       {step.step}
                     </span>
 
                     <div className="flex-grow pr-8">
                       {/* Title */}
-                      <h3 className={`text-xl md:text-2xl font-bold transition-colors duration-300 mb-2 ${
-                        isOpen ? 'text-white' : 'text-slate-300 group-hover:text-white'
-                      }`}>
-                        {step.title}
+                      <h3 className={`text-xl md:text-2xl font-bold transition-colors duration-300 mb-2 ${isOpen ? 'text-white' : 'text-slate-300 group-hover:text-white'
+                        }`}>
+                        {translatedTitle}
                       </h3>
 
                       {/* Description (Accordion) */}
-                      <div 
-                        className={`grid transition-all duration-300 ease-in-out ${
-                          isOpen ? 'grid-rows-[1fr] opacity-100 pt-2' : 'grid-rows-[0fr] opacity-0 pt-0'
-                        }`}
+                      <div
+                        className={`grid transition-all duration-300 ease-in-out ${isOpen ? 'grid-rows-[1fr] opacity-100 pt-2' : 'grid-rows-[0fr] opacity-0 pt-0'
+                          }`}
                       >
                         <div className="overflow-hidden">
                           <p className="text-slate-400 text-base leading-relaxed md:max-w-2xl">
-                            {step.description}
+                            {translatedDesc}
                           </p>
                         </div>
                       </div>
