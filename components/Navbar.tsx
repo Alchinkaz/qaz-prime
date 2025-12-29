@@ -11,6 +11,7 @@ export const Navbar: React.FC = () => {
   const [isLangOpen, setIsLangOpen] = useState(false);
   const lastScrollY = useRef(0);
   const langMenuRef = useRef<HTMLDivElement>(null);
+  const langMenuMobileRef = useRef<HTMLDivElement>(null);
 
   const languages = [
     { code: 'kz', label: 'Қаз', flag: '🇰🇿' },
@@ -19,6 +20,7 @@ export const Navbar: React.FC = () => {
   ];
 
   const changeLanguage = (code: string) => {
+    console.log('Changing language to:', code);
     i18n.changeLanguage(code);
     setIsLangOpen(false);
   };
@@ -45,7 +47,9 @@ export const Navbar: React.FC = () => {
     };
 
     const handleClickOutside = (event: MouseEvent) => {
-      if (langMenuRef.current && !langMenuRef.current.contains(event.target as Node)) {
+      const target = event.target as Node;
+      if (langMenuRef.current && !langMenuRef.current.contains(target) &&
+        langMenuMobileRef.current && !langMenuMobileRef.current.contains(target)) {
         setIsLangOpen(false);
       }
     };
@@ -146,12 +150,35 @@ export const Navbar: React.FC = () => {
 
                   <div className="relative" ref={langMenuRef}>
                     <button
-                      onClick={() => setIsLangOpen(!isLangOpen)}
+                      type="button"
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        setIsLangOpen(!isLangOpen);
+                      }}
                       className={`w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center transition-colors cursor-pointer border border-slate-700 ${isLangOpen ? 'text-white bg-slate-700' : 'text-slate-400 hover:text-white hover:bg-slate-700'}`}
                     >
                       <Globe size={20} />
                     </button>
-                    {isLangOpen && <LanguageDropdown />}
+                    {isLangOpen && (
+                      <div className="absolute top-full right-0 mt-3 w-32 bg-[#1e293b] border border-slate-700/50 rounded-xl shadow-xl overflow-hidden py-1 z-50 animate-in fade-in zoom-in-95 duration-200">
+                        {languages.map((lang) => (
+                          <button
+                            key={lang.code}
+                            type="button"
+                            onClick={(e) => {
+                              e.stopPropagation();
+                              changeLanguage(lang.code);
+                            }}
+                            className="w-full px-4 py-2.5 flex items-center gap-3 hover:bg-slate-800 transition-colors group text-left"
+                          >
+                            <span className="text-lg leading-none">{lang.flag}</span>
+                            <span className={`text-sm font-medium ${i18n.language === lang.code ? 'text-red-500' : 'text-slate-300 group-hover:text-white'}`}>
+                              {lang.label}
+                            </span>
+                          </button>
+                        ))}
+                      </div>
+                    )}
                   </div>
                 </div>
 
@@ -186,9 +213,13 @@ export const Navbar: React.FC = () => {
                   </div>
                 </div>
 
-                <div className="relative" ref={langMenuRef}>
+                <div className="relative" ref={langMenuMobileRef}>
                   <button
-                    onClick={() => setIsLangOpen(!isLangOpen)}
+                    type="button"
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      setIsLangOpen(!isLangOpen);
+                    }}
                     className={`w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center transition-colors cursor-pointer border border-slate-700 ${isLangOpen ? 'text-white bg-slate-700' : 'text-slate-400 hover:text-white hover:bg-slate-700'}`}
                   >
                     <Globe size={20} />
@@ -198,7 +229,11 @@ export const Navbar: React.FC = () => {
                       {languages.map((lang) => (
                         <button
                           key={lang.code}
-                          onClick={() => changeLanguage(lang.code)}
+                          type="button"
+                          onClick={(e) => {
+                            e.stopPropagation();
+                            changeLanguage(lang.code);
+                          }}
                           className="w-full px-4 py-2.5 flex items-center gap-3 hover:bg-slate-800 transition-colors group text-left"
                         >
                           <span className="text-lg leading-none">{lang.flag}</span>
