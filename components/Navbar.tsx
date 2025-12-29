@@ -20,7 +20,6 @@ export const Navbar: React.FC = () => {
   ];
 
   const changeLanguage = (code: string) => {
-    console.log('Changing language to:', code);
     i18n.changeLanguage(code);
     setIsLangOpen(false);
   };

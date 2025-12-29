@@ -54,6 +54,25 @@
     }
     </script>
 
+  <script>
+    // Suppress specific production warnings and third-party logs
+    (function () {
+      const originalWarn = console.warn;
+      const originalInfo = console.info;
+      console.warn = function (...args) {
+        if (args[0] && typeof args[0] === 'string' && (
+          args[0].includes('cdn.tailwindcss.com') ||
+          args[0].includes('Partitioned cookie')
+        )) return;
+        originalWarn.apply(console, args);
+      };
+      console.info = function (...args) {
+        if (args[0] && typeof args[0] === 'string' && args[0].includes('tailwindcss')) return;
+        originalInfo.apply(console, args);
+      };
+    })();
+  </script>
+
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
