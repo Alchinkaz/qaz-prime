@@ -129,7 +129,7 @@ export const Hero: React.FC = () => {
         <div className="relative w-full h-[500px] flex items-end justify-center overflow-hidden">
           <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-red-600/20 to-transparent blur-3xl opacity-60"></div>
           <img
-            src="/hero.png"
+            src="/hero-mobile.jpg"
             alt="Юридическая защита эксперта"
             className="relative z-10 w-full h-full object-contain object-bottom drop-shadow-2xl px-4 scale-110"
           />

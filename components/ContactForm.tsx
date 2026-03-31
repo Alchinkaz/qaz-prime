@@ -23,7 +23,7 @@ export const ContactForm: React.FC = () => {
     };
 
     return (
-        <div id="contact-form" className="bg-slate-950 pt-3 pb-8 lg:pt-24 relative overflow-hidden">
+        <div id="contact-form" className="bg-slate-950 pt-[13px] pb-8 lg:pt-24 relative overflow-hidden">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
 
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-stretch">
