@@ -12,7 +12,7 @@ export const FAQ: React.FC = () => {
   };
 
   return (
-    <div id="faq" className="bg-slate-950 py-24">
+    <div id="faq" className="bg-slate-950 pt-3 pb-3 lg:py-24">
       {/* FAQ Structured Data for SEO */}
       <script type="application/ld+json">
         {JSON.stringify({

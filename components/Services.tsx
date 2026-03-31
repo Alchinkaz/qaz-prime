@@ -16,7 +16,7 @@ export const Services: React.FC = () => {
   };
 
   return (
-    <div id="services" className="bg-slate-950 pt-3 pb-20 lg:py-20 relative">
+    <div id="services" className="bg-slate-950 pt-3 pb-3 lg:py-20 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
           <div className="max-w-2xl">

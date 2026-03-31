@@ -5,7 +5,7 @@ import { useTranslation } from 'react-i18next';
 export const Founder: React.FC = () => {
   const { t, i18n } = useTranslation();
   return (
-    <div className="bg-slate-950 py-24 relative">
+    <div className="bg-slate-950 pt-3 pb-3 lg:py-24 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid md:grid-cols-2 gap-12 lg:gap-20 items-center">
           {/* Content Column */}

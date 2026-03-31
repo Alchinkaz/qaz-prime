@@ -83,7 +83,7 @@ export const Stats: React.FC = () => {
   const col2Indices = [1, 3];
 
   return (
-    <div id="about" className="bg-slate-950 py-24 relative border-t border-slate-950">
+    <div id="about" className="bg-slate-950 pt-6 pb-3 lg:py-24 relative border-t border-slate-950">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="lg:flex lg:items-start lg:gap-20">
 
