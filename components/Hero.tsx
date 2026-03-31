@@ -43,7 +43,7 @@ export const Hero: React.FC = () => {
       {/* Hero Section - Screen Height on Desktop/Tablet */}
       <div className="relative h-screen flex flex-col overflow-hidden">
         {/* Main Content Area - restored standard max-width for balance */}
-        <div className="flex-1 min-h-0 flex md:items-center pt-20 md:pt-24 pb-8 md:pb-0 overflow-hidden">
+        <div className="flex-1 min-h-0 flex md:items-center pt-20 md:pt-24 pb-2 md:pb-0 overflow-hidden">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full h-full flex flex-col md:justify-center">
             <div className="grid md:grid-cols-2 gap-8 md:gap-12 md:items-center h-full min-h-0">
 
@@ -73,7 +73,7 @@ export const Hero: React.FC = () => {
 
                 {/* Bottom Section: Button */}
                 <div className="w-full md:w-auto">
-                  <div className="flex flex-col items-center md:items-start max-md:pb-6">
+                  <div className="flex flex-col items-center md:items-start max-md:pb-2">
                     <Button onClick={scrollToContact} className="w-auto px-8 py-3.5 md:px-8 shadow-lg shadow-red-600/20 justify-center whitespace-nowrap mb-3 text-sm md:text-base font-medium">
                       {t('hero.cta')}
                     </Button>
@@ -114,7 +114,7 @@ export const Hero: React.FC = () => {
       </div>
 
       {/* Mobile-Only Section: Large Image and Marquee (Appears after h-screen) */}
-      <div className="md:hidden flex flex-col bg-slate-950 pt-12">
+      <div className="md:hidden flex flex-col bg-slate-950 pt-2">
         {/* Founder Badge - Mobile */}
         <div
           ref={badgeRef}
