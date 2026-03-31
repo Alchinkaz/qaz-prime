@@ -2,7 +2,7 @@ import React from 'react';
 
 export const About: React.FC = () => {
   return (
-    <div id="about" className="bg-slate-900 py-24 border-y border-slate-800">
+    <div id="about" className="bg-slate-900 py-8 lg:py-24 border-y border-slate-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="lg:flex lg:items-center lg:gap-20">
           <div className="lg:w-1/2 mb-12 lg:mb-0">
