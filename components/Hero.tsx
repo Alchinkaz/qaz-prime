@@ -43,33 +43,41 @@ export const Hero: React.FC = () => {
       {/* Hero Section - Screen Height on Desktop/Tablet */}
       <div className="relative h-screen flex flex-col overflow-hidden">
         {/* Main Content Area - restored standard max-width for balance */}
-        <div className="flex-1 min-h-0 flex items-center pt-20 md:pt-24 pb-0 overflow-hidden">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full h-full flex flex-col justify-center">
-            <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center h-full min-h-0">
+        <div className="flex-1 min-h-0 flex md:items-center pt-20 md:pt-24 pb-8 md:pb-0 overflow-hidden">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full h-full flex flex-col md:justify-center">
+            <div className="grid md:grid-cols-2 gap-8 md:gap-12 md:items-center h-full min-h-0">
 
               {/* Text Content */}
-              <div className="relative z-10 flex flex-col items-center text-center md:items-start md:text-left py-4 md:py-8 md:mt-8 shrink-0">
-                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-800/50 border border-slate-700 backdrop-blur-sm mb-4 md:mb-6">
-                  <span className="text-xs font-medium text-red-500 tracking-wide uppercase">{t('hero.badge')}</span>
+              <div className="relative z-10 flex flex-col h-full md:h-auto justify-between md:justify-start items-center text-center md:items-start md:text-left py-4 md:py-8 md:mt-8 shrink-0">
+                
+                {/* Top Section: Badge & Title */}
+                <div className="flex flex-col items-center md:items-start pt-20 md:pt-0">
+                  <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-800/50 border border-slate-700 backdrop-blur-sm mb-4 md:mb-6">
+                    <span className="text-xs font-medium text-red-500 tracking-wide uppercase">{t('hero.badge')}</span>
+                  </div>
+
+                  <h1 className="text-3xl md:text-4xl lg:text-6xl font-bold text-white tracking-tight md:mb-4 leading-tight uppercase">
+                    {t('hero.title_1')} <br />
+                    <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-red-700">
+                      {t('hero.title_2')}
+                    </span>
+                  </h1>
                 </div>
 
-                <h1 className="text-2xl md:text-4xl lg:text-6xl font-bold text-white tracking-tight mb-4 leading-tight uppercase">
-                  {t('hero.title_1')} <br />
-                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-red-700">
-                    {t('hero.title_2')}
-                  </span>
-                </h1>
+                {/* Center Section: Subtitle */}
+                <div className="flex-1 flex items-center justify-center md:flex-none md:items-start md:justify-start">
+                  <p className="text-[15px] md:text-lg text-slate-400 max-w-lg leading-relaxed md:border-l-2 border-red-600 md:pl-4 px-2 md:px-0">
+                    {t('hero.subtitle')}
+                  </p>
+                </div>
 
-                <p className="text-sm md:text-lg text-slate-400 mb-6 max-w-lg leading-relaxed md:border-l-2 border-red-600 md:pl-4">
-                  {t('hero.subtitle')}
-                </p>
-
+                {/* Bottom Section: Button */}
                 <div className="w-full md:w-auto">
-                  <div className="flex flex-col items-center md:items-start">
-                    <Button onClick={scrollToContact} className="w-full md:w-auto px-6 py-2.5 md:px-8 md:py-3 shadow-lg shadow-red-600/20 justify-center whitespace-nowrap mb-4">
+                  <div className="flex flex-col items-center md:items-start max-md:pb-6">
+                    <Button onClick={scrollToContact} className="w-auto px-8 py-3.5 md:px-8 shadow-lg shadow-red-600/20 justify-center whitespace-nowrap mb-3 text-sm md:text-base font-medium">
                       {t('hero.cta')}
                     </Button>
-                    <p className="text-[10px] md:text-xs text-slate-500 leading-tight text-center md:text-left">
+                    <p className="text-[10px] md:text-xs text-slate-500 leading-tight text-center md:text-left max-w-xs md:max-w-none px-4 md:px-0">
                       {t('hero.consent')}
                     </p>
                   </div>
