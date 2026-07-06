@@ -97,7 +97,7 @@ export const Hero: React.FC = () => {
                 </div>
 
                 <img
-                  src="/hero.png"
+                  src="/hero-mobile.jpg"
                   alt="Юридическая защита"
                   className="relative z-10 max-w-full max-h-[105%] object-contain object-bottom drop-shadow-2xl scale-110 origin-bottom"
                 />
